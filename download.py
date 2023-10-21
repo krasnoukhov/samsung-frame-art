@@ -21,7 +21,7 @@ def download_wallpapers():
 
         wallpaper_path = get_wallpaper_path(wallpaper_id)
         if os.path.exists(wallpaper_path):
-            print("Wallpaper exists: " + wallpaper_id)
+            # print("Wallpaper exists: " + wallpaper_id)
             continue
 
         print("Wallpaper download: " + wallpaper_id)

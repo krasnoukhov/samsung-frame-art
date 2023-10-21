@@ -22,4 +22,7 @@ ARG TV_HOST
 
 RUN echo "${SCHEDULE} MAX_DOWNLOADS=${MAX_DOWNLOADS} TV_HOST=${TV_HOST} bash /app/entry.sh" >> /var/spool/cron/crontabs/root
 
+RUN cp /usr/share/zoneinfo/Europe/Kyiv /etc/localtime
+RUN echo "Europe/Kyiv" > /etc/timezone
+
 CMD date && crond -f -L /dev/stdout
